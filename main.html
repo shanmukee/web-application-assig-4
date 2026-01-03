@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GITAM Website</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        /* MAIN LAYOUT */
+        .container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ROW 1 */
+        .top {
+            height: 20%;
+            display: flex;
+        }
+
+        .logo {
+            width: 25%;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        .header {
+            width: 75%;
+            background-color: #eb0c0c;
+            color: white;
+            text-align: center;
+            line-height: 120px;
+            font-size: 28px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        /* ROW 2 */
+        .nav {
+            height: 15%;
+            background-color: #0f33e6;
+            text-align: center;
+            line-height: 60px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 15px;
+            display: inline-block;
+        }
+
+        .nav a:hover {
+            background-color: #555;
+        }
+
+        /* ROW 3 */
+        .bottom {
+            height: 65%;
+            display: flex;
+        }
+
+        .sidebar {
+            width: 25%;
+            background-color: #e3e70c;
+            padding: 10px;
+        }
+
+        .sidebar h3 {
+            text-align: center;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 8px;
+            text-decoration: none;
+            color: #003366;
+        }
+
+        .sidebar a:hover {
+            background-color: #ddd;
+        }
+
+        .content {
+            width: 75%;
+            background-color: rgb(95, 235, 8);
+            padding: 20px;
+        }
+    </style>
+
+    <script>
+        function loadContent(title, text) {
+            document.getElementById("content-area").innerHTML =
+                "<h2>" + title + "</h2><p>" + text + "</p>";
+        }
+    </script>
+</head>
+
+<body>
+<div class="container">
+
+    <!-- TOP ROW -->
+    <div class="top">
+        <div class="logo">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADgC
+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
+AAAAASUVORK5CYII="
+                 width="235" height="130">
+        </div>
+
+        <div class="header">
+            GITAM University Website
+        </div>
+    </div>
+
+    <!-- NAV BAR -->
+    <div class="nav">
+        <a href="#" onclick="loadContent('Home','Welcome to GITAM Website')">Home</a> |
+        <a href="#" onclick="loadContent('Student Info','Student academic and personal details')">Student Info</a> |
+        <a href="#" onclick="loadContent('G-Learn','Online learning platform')">G-Learn</a> |
+        <a href="#" onclick="loadContent('Registration','Course registration details')">Registration</a>
+    </div>
+
+    <!-- BOTTOM ROW -->
+    <div class="bottom">
+
+        <!-- LEFT PANEL -->
+        <div class="sidebar">
+            <h3>Dashboard</h3>
+            <a href="#" onclick="loadContent('Courses','Courses offered by GITAM')">Courses</a>
+            <a href="#" onclick="loadContent('Attendance','Attendance details')">Attendance</a>
+            <a href="#" onclick="loadContent('G-Learn','Learning resources')">G-Learn</a>
+            <a href="#" onclick="loadContent('Academic Textbooks','Prescribed textbooks')">Academic Textbooks</a>
+            <a href="#" onclick="loadContent('Timetable','Class timetable')">Timetable</a>
+        </div>
+
+        <!-- RIGHT PANEL -->
+        <div class="content" id="content-area">
+            <h2>Welcome to GITAM Website</h2>
+            <p>
+                This website provides academic information, student services,
+                online learning platforms, and course details.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>
